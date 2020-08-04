@@ -37,7 +37,7 @@ class Pet:
 class CuddlyPet(Pet):
     #Super fnction - we can override __init()__ while also reusing the __init__() code from the superclass.
     #With this technique, a CuddlyPet could accept additional constructor arguments:
-    def __init__(self, name, fullness=50, hunger=5, cuddle_level=1):
+    def __init__(self, name, fullness=50, hunger=5, cuddle_level="Extra Cuddly"):
         super().__init__(name, fullness, 100, hunger, 1)
         self.cuddle_level = cuddle_level
 
@@ -58,5 +58,5 @@ class CuddlyPet(Pet):
         Fullness: %d
         Happiness: %d
         Cuddliness: %s
-        """ % (self.name, self.fullness, self.happiness,"Extra Cuddly") 
+        """ % (self.name, self.fullness, self.happiness,self.cuddle_level) 
 
